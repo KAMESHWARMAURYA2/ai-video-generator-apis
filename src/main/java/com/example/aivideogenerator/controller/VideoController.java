@@ -28,7 +28,7 @@ public class VideoController {
         this.videoGenerationService = videoGenerationService;
     }
 
-    @PostMapping("/generate-video")
+    @PostMapping({"/generate-video", "/videos/generate"})
     public GenerateVideoResponse generateVideo(
             @RequestParam("images") List<MultipartFile> images,
             @RequestParam("script") String script,
